@@ -1,5 +1,5 @@
 # Summary
-A reference implementation for an AI-powered credit card solution in Python, Java, and Rust. Features an AI agent for card scoring and ranking, a Spark + Iceberg ETL pipeline for data ingestion, and a Retrieval-Augmented Generation (RAG) system.
+This repository provides a reference for AI-powered credit card decisioning implemented in Python, Java, and Rust. It demonstrates how to orchestrate real-time AI agents for credit scoring, execute high-throughput data ingestion using Apache Spark and Apache Iceberg, and leverage Retrieval-Augmented Generation (RAG).
 
 ## Prerequisites
 
