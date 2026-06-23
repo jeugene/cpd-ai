@@ -37,8 +37,6 @@ TBD
 cd src/main/rust && cargo run --release
 ```
 
-Set `ANTHROPIC_API_KEY` (or provider-appropriate key) before running the agent.
-
 ## Test
 
 ```bash
