@@ -1,4 +1,4 @@
-# CPD AI
+# Summary
 A reference implementation for an AI-powered credit card solution in Python, Java, and Rust. Features an AI agent for card scoring and ranking, a Spark + Iceberg ETL pipeline for data ingestion, and a Retrieval-Augmented Generation (RAG) system.
 
 ## Prerequisites
@@ -31,9 +31,10 @@ poetry run python src/main/python/agents/cards_agent.py    # research agent
 poetry run python src/main/python/rag/ingest.py            # RAG ingest
 
 # Java
-TBD
+TODO
 
 # Rust
+TODO
 cd src/main/rust && cargo run --release
 ```
 
@@ -108,7 +109,7 @@ Config file: `src/main/python/core/config.ini` `[spark]`
 
 | Env var | Description |
 |---|---|
-| `ANTHROPIC_API_KEY` | Anthropic API key (default provider) |
+
 
 ## Code tree
 
