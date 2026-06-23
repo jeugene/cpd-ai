@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level [%logger{25}] - %msg%n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <!-- suppress Spark/Hadoop noise during tests -->
+        <Logger name="org.apache.spark" level="WARN"/>
+        <Logger name="org.apache.hadoop" level="WARN"/>
+        <Logger name="org.sparkproject" level="WARN"/>
+        <Logger name="io.netty" level="WARN"/>
+
+        <Logger name="com.cloudpid" level="DEBUG"/>
+
+        <Root level="WARN">
+            <AppenderRef ref="CONSOLE"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

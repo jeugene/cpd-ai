@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Ruff
+.ruff_cache/
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+hs_err_pid*.log
+
+# Rust
+src/main/rust/target/
+src/main/rust/**/*.rs.bk
+src/main/rust/Cargo.lock
+
+# Logs
+logs/
+*.log
+
+# Temp files
+tmp/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets / env
+.env
+.env.*
+!.env.example
+
+# Pyiceberg / local catalog
+warehouse/
+*.db
+
+.aws/
+
+.claude/
+CL*.md
+
+
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+*.tfvars
+!*.tfvars.example
+.terraformrc
+terraform.rc
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+crash.log
+crash.*.log
+

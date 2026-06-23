@@ -1,0 +1,53 @@
+[project]
+name = "cpd-ai"
+version = "0.1.0"
+description = "Banking credit cards data pipeline"
+authors = [{ name = "joe@cloudpid.com" }]
+requires-python = ">=3.12"
+dependencies = ["anthropic>=0.52.0", "openai>=1.0.0", "pandas>=2.2.0"]
+
+[dependency-groups]
+dev = [
+    "boto3 (>=1.43.24,<2.0.0)",
+    "pyspark (>=4.1.2,<5.0.0)",
+    "pytest>=8.0.0",
+    "ruff>=0.4.0",
+]
+
+[project.scripts]
+build-zip = "scripts.build_zip:main"
+
+[tool.poetry]
+packages = [
+    { include = "*", from = "src/main/python" },
+    { include = "scripts" },
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 125
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "N"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["core", "agents", "rag"]
+
+[tool.pytest.ini_options]
+testpaths = ["src/test/python"]
+pythonpath = ["src/main/python"]
+log_cli = true
+log_cli_level = "INFO"
+
+[tool.pyright]
+pythonVersion = "3.12"
+venvPath = "."
+venv = ".venv"
+extraPaths = ["src/main/python"]
+reportMissingImports = "warning"
+reportMissingModuleSource = "none"
